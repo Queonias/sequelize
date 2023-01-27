@@ -25,10 +25,10 @@
 // src/config/config.js
 
 const config = {
-  username: root,
-  password: senha_mysql,
-  database: orm_example,
-  host: localhost,
+  username: 'root',
+  password: 'senha_mysql',
+  database: 'orm_example',
+  host: 'localhost',
   dialect: 'mysql',
 };
 
