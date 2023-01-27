@@ -21,5 +21,8 @@
     "express": "4.17",
     "mysql2": "2.3",
     "sequelize": "6.3"
+  },
+  "devDependencies": {
+    "sequelize-cli": "6.2"
   }
 }
