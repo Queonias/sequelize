@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/Queonias/sequelize/issues"
   },
-  "homepage": "https://github.com/Queonias/sequelize#readme"
+  "homepage": "https://github.com/Queonias/sequelize#readme",
+  "dependencies": {
+    "express": "4.17",
+    "mysql2": "2.3",
+    "sequelize": "6.3"
+  }
 }
