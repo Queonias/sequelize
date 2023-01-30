@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/server.js"
   },
   "repository": {
     "type": "git",
@@ -19,8 +19,10 @@
   },
   "homepage": "https://github.com/Queonias/sequelize#readme",
   "dependencies": {
+    "dotenv": "10.0",
     "express": "4.17",
     "mysql2": "2.3",
+    "nodemon": "2.0",
     "sequelize": "6.3"
   },
   "devDependencies": {

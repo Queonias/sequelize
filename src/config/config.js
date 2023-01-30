@@ -1,39 +1,26 @@
-// {
-//   "development": {
-//     "username": "root",
-//     "password": null,
-//     "database": "database_development",
-//     "host": "127.0.0.1",
-//     "dialect": "mysql"
-//   },
-//   "test": {
-//     "username": "root",
-//     "password": null,
-//     "database": "database_test",
-//     "host": "127.0.0.1",
-//     "dialect": "mysql"
-//   },
-//   "production": {
-//     "username": "root",
-//     "password": null,
-//     "database": "database_production",
-//     "host": "127.0.0.1",
-//     "dialect": "mysql"
-//   }
-// }
-
 // src/config/config.js
 
+require('dotenv').config();
+
 const config = {
-  username: 'root',
-  password: 'senha_mysql',
-  database: 'orm_example',
-  host: 'localhost',
+  username: process.env.MYSQL_USER,
+  password: process.env.MYSQL_PASSWORD,
+  host: process.env.MYSQL_HOST,
   dialect: 'mysql',
 };
 
 module.exports = {
-  development: config,
-  test: config,
-  production: config,
+  development: {
+    ...config,
+    database: 'employees_associations_development',
+  },
+  test: {
+    ...config,
+    database: 'employees_associations_test',
+    logging: false,
+  },
+  production: {
+    ...config,
+    database: 'employees_associations_production',
+  },
 };
